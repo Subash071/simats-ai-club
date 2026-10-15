@@ -46,9 +46,16 @@ function FrontCard({ member, isActive }: { member: TeamMember, isActive: boolean
         <h3 className="text-2xl font-display font-bold text-foreground mb-0.5 tracking-tight group-hover:text-accent transition-colors truncate">
           {member.name}
         </h3>
-        <p className="text-muted font-medium text-sm">
-          {isRoleSame ? member.category : member.role}
-        </p>
+        <div className="flex items-center justify-between gap-2">
+          <p className="text-muted font-medium text-sm">
+            {isRoleSame ? member.category : member.role}
+          </p>
+          {member.badge && (
+            <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-accent/15 text-accent border border-accent/30 tracking-tight shrink-0">
+              {member.badge}
+            </span>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -78,9 +85,16 @@ function BackCard({ member, onClose }: { member: TeamMember, onClose: () => void
               </span>
             </div>
             <h3 className="text-2xl font-display font-bold text-foreground">{member.name}</h3>
-            <p className="text-accent font-medium tracking-wide uppercase text-xs">
-              {isRoleSame ? member.category : member.role}
-            </p>
+            <div className="flex items-center gap-2 mt-0.5">
+              <p className="text-accent font-medium tracking-wide uppercase text-xs">
+                {isRoleSame ? member.category : member.role}
+              </p>
+              {member.badge && (
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-accent/15 text-accent border border-accent/30 shrink-0">
+                  {member.badge}
+                </span>
+              )}
+            </div>
           </div>
         </div>
         <button 

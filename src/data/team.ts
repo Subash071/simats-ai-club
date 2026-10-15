@@ -4,6 +4,7 @@ export interface TeamMember {
   name: string;
   role: string;
   category: string;
+  badge?: string;
   image: string;
   bio: string;
   focus: string[];
@@ -17,14 +18,14 @@ export const team: TeamMember[] = [
   {
     id: 1,
     number: "01",
-    name: "Dr. Alan Turing",
+    name: "Dr. S. Joshua Kumaresan",
     role: "Faculty Advisor",
     category: "FACULTY",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400&h=400",
-    bio: "Guiding students toward practical AI learning, research, and innovation. Experienced in building computational models.",
-    focus: ["Computational Theory", "Machine Learning", "Systems Architecture"],
-    projects: ["AI Computing Cluster", "Ethics in AI Syllabus"],
-    quote: "We can only see a short distance ahead, but we can see plenty there that needs to be done.",
+    image: "/team/faculty.jpg",
+    bio: "Guiding students toward practical AI learning, research, and innovation. Mentoring the community in academic and technical excellence.",
+    focus: ["Machine Learning", "Academic Research", "Systems Engineering"],
+    projects: ["AI Research Group", "Curriculum Mentorship"],
+    quote: "Empowering young engineering minds to push the boundaries of Artificial Intelligence.",
     instagram: "#",
     linkedin: "#"
   },
@@ -59,16 +60,17 @@ export const team: TeamMember[] = [
   {
     id: 4,
     number: "03",
-    name: "Secretary",
+    name: "Subash G",
     role: "Secretary",
     category: "OPERATIONS",
+    badge: "Created this website",
     image: "/team/secretary.jpg",
-    bio: "Managing institutional communications, workshop documentation, and inter-departmental operations.",
-    focus: ["Operations", "Technical Writing", "Event Coordination"],
-    projects: ["Club Annual Report", "Workshop Operations Pipeline"],
+    bio: "Created and engineered the official SIMATS Engineering AI Club website. Managing institutional communications, digital infrastructure, and core club operations.",
+    focus: ["Web Engineering", "Operations", "AI Systems", "UI/UX"],
+    projects: ["SIMATS AI Club Official Website", "Operations & Outreach Pipeline"],
     quote: "Consistency, clarity, and dedication are the foundation of great execution.",
-    instagram: "#",
-    linkedin: "#"
+    instagram: "https://www.instagram.com/subash_gx?xtok=MXBqZjlmNHE3M3RjNw==",
+    linkedin: "https://www.linkedin.com/in/subash-g-42271b37b"
   },
   {
     id: 5,
