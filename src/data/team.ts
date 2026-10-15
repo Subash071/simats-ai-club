@@ -4,6 +4,7 @@ export interface TeamMember {
   name: string;
   role: string;
   category: string;
+  department?: string;
   badge?: string;
   image: string;
   bio: string;
@@ -21,6 +22,7 @@ export const team: TeamMember[] = [
     name: "Dr. S. Joshua Kumaresan",
     role: "Faculty Advisor",
     category: "FACULTY",
+    department: "Dept of CSE",
     image: "/team/faculty.jpg",
     bio: "Guiding students toward practical AI learning, research, and innovation. Mentoring the community in academic and technical excellence.",
     focus: ["Machine Learning", "Academic Research", "Systems Engineering"],
@@ -35,6 +37,7 @@ export const team: TeamMember[] = [
     name: "President",
     role: "President",
     category: "LEADERSHIP",
+    department: "Dept of CSE",
     image: "/team/president.jpg",
     bio: "Leading executive club vision, directing campus-wide AI initiatives, and fostering technology partnerships.",
     focus: ["AI Strategy", "Community Leadership", "Deep Learning"],
@@ -49,6 +52,7 @@ export const team: TeamMember[] = [
     name: "Vice President",
     role: "Vice President",
     category: "LEADERSHIP",
+    department: "Dept of CSE",
     image: "/team/vice-president.jpg",
     bio: "Spearheading hackathons, overseeing technical project incubation, and accelerating core club growth.",
     focus: ["Computer Vision", "Project Incubation", "Robotics"],
@@ -63,10 +67,11 @@ export const team: TeamMember[] = [
     name: "Subash G",
     role: "Secretary",
     category: "OPERATIONS",
+    department: "Dept of CSE - AI",
     badge: "Created this website",
     image: "/team/secretary.jpg",
     bio: "Created and engineered the official SIMATS Engineering AI Club website. Managing institutional communications, digital infrastructure, and core club operations.",
-    focus: ["Web Engineering", "Operations", "AI Systems", "UI/UX"],
+    focus: ["Data Science", "Machine Learning", "Operations", "Web Engineering"],
     projects: ["SIMATS AI Club Official Website", "Operations & Outreach Pipeline"],
     quote: "Consistency, clarity, and dedication are the foundation of great execution.",
     instagram: "https://www.instagram.com/subash_gx?xtok=MXBqZjlmNHE3M3RjNw==",
@@ -78,6 +83,7 @@ export const team: TeamMember[] = [
     name: "Treasurer",
     role: "Treasurer",
     category: "FINANCE",
+    department: "Dept of CSE",
     image: "/team/treasurer.jpg",
     bio: "Managing budget allocations, resource planning, and sponsorship acquisitions for student projects.",
     focus: ["Financial Planning", "Resource Management", "Sponsorship"],

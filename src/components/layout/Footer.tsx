@@ -12,13 +12,13 @@ export function Footer() {
   const renderCreatorContent = () => {
     switch (activeTab) {
       case "profile":
-        return <p className="text-gray-300 text-sm leading-relaxed">Passionate developer focused on building intuitive and performant web applications. Experienced in React, Node.js, and modern frontend ecosystems.</p>;
+        return <p className="text-gray-300 text-sm leading-relaxed">Secretary & Creator of the official SIMATS Engineering AI Club website. Passionate about data analytics, Machine Learning architectures, and empowering student communities through technology.</p>;
       case "projects":
-        return <ul className="text-gray-300 text-sm space-y-2 list-disc list-inside"><li>SIMATS AI Club Website</li><li>Automated Workflow System</li><li>Real-time Data Dashboard</li></ul>;
+        return <ul className="text-gray-300 text-sm space-y-2 list-disc list-inside"><li>SIMATS AI Club Official Website</li><li>Data Analytics & ML Exploration Pipelines</li><li>Student Operations & Outreach Infrastructure</li></ul>;
       case "skills":
-        return <div className="flex flex-wrap gap-2"><span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs border border-accent/20">React</span><span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs border border-accent/20">TypeScript</span><span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs border border-accent/20">Tailwind CSS</span><span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs border border-accent/20">Framer Motion</span></div>;
+        return <div className="flex flex-wrap gap-2"><span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs border border-accent/20">Machine Learning</span><span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs border border-accent/20">Data Analysis</span><span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs border border-accent/20">Python</span><span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs border border-accent/20">React</span><span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs border border-accent/20">TypeScript</span></div>;
       case "interests":
-        return <p className="text-gray-300 text-sm leading-relaxed">Web Engineering, Generative AI, UI/UX Design, and Open Source Software.</p>;
+        return <p className="text-gray-300 text-sm leading-relaxed">I like working with data, data analysis, and Machine Learning much more than traditional software development. Passionate about uncovering patterns in data, training predictive models, and applied AI systems.</p>;
       default:
         return null;
     }

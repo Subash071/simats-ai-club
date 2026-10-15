@@ -1,7 +1,7 @@
 export const siteConfig = {
   clubName: "SIMATS ENGINEERING AI CLUB",
   logo: "/logo.jpg",
-  universityName: "[University Name]",
+  universityName: "SIMATS",
   tagline: "Where Students Build the Future with AI.",
   description: "A student-driven community exploring Artificial Intelligence through learning, experimentation, research, projects and real-world problem solving.",
   contact: {
@@ -10,6 +10,7 @@ export const siteConfig = {
     campus: "Main Campus, Innovation Building",
   },
   social: {
+    whatsapp: "https://chat.whatsapp.com/J3QiulpD8Y53etqAEXXDly",
     linkedin: "https://linkedin.com",
     github: "https://github.com",
     instagram: "https://www.instagram.com/simats_ai_club?utm_source=qr&stkn=MXd6bjMyeXg4a2JjeQ==",
