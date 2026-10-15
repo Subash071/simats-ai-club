@@ -49,3 +49,14 @@
     text-wrap: balance;
   }
 }
+
+/* Hide Netlify Deploy Preview / Feedback Drawer & Badge */
+#netlify-drawer,
+iframe#netlify-drawer,
+[data-netlify-drawer],
+.netlify-drawer {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
