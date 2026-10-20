@@ -24,7 +24,7 @@ export const projects: Project[] = [
     team: ["Ada Lovelace", "John von Neumann"],
     category: "Computer Vision",
     githubLink: "https://github.com",
-    status: "Completed",
+    status: "In Progress",
     image: "",
   },
   {
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     team: ["Margaret Hamilton", "Ada Lovelace"],
     category: "NLP",
     githubLink: "https://github.com",
-    status: "Completed",
+    status: "In Progress",
     image: "",
   }
 ];
