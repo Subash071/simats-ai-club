@@ -45,12 +45,13 @@ export const events: Event[] = [
     id: "evt-3",
     title: "Industry Session: AI in Healthcare",
     type: "Guest Lecture",
-    date: "2026-09-20",
-    time: "16:00 - 17:30",
-    location: "Virtual (Zoom)",
+    date: "Coming Soon",
+    time: "Coming Soon",
+    location: "SIMATS",
     description: "Learn how machine learning is revolutionizing diagnostics and patient care from industry experts.",
-    registrationOpen: false,
+    registrationOpen: true,
+    registrationLink: "https://forms.google.com",
     image: "",
-    past: true,
+    past: false,
   }
 ];

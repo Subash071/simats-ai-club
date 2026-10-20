@@ -22,7 +22,7 @@ export const team: TeamMember[] = [
     name: "Dr. S. Joshua Kumaresan",
     role: "Faculty Advisor",
     category: "FACULTY",
-    department: "Dept of CSE",
+    department: "Dept of ECE",
     image: "/team/faculty.jpg",
     bio: "Guiding students toward practical AI learning, research, and innovation. Mentoring the community in academic and technical excellence.",
     focus: ["Machine Learning", "Academic Research", "Systems Engineering"],
