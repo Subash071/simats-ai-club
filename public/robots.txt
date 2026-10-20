@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://simats-ai-club.netlify.app/sitemap.xml
