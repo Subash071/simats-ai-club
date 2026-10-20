@@ -17,7 +17,7 @@ export const siteConfig = {
     twitter: "https://x.com"
   },
   forms: {
-    joinClub: "https://forms.google.com/placeholder-join",
+    joinClub: "https://docs.google.com/forms/d/e/1FAIpQLSch3XpmljhlAt7AM0Oz1I7Yr7F8fOFV85Hiufu3kqZ7kuu52A/viewform?usp=publish-editor",
     eventRegistration: "https://forms.google.com/placeholder-event",
     submitProject: "https://forms.google.com/placeholder-project",
     submitIdea: "https://forms.google.com/placeholder-idea"
