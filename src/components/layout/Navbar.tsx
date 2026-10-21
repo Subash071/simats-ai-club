@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Play } from 'lucide-react';
 import { Button, cn } from '../ui/Button';
 import { siteConfig } from '../../data/siteConfig';
+import { useAnthemModal } from '../../context/AnthemModalContext';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -16,6 +17,7 @@ const navLinks = [
 ];
 
 export function Navbar() {
+  const { openAnthem } = useAnthemModal();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -57,12 +59,28 @@ export function Navbar() {
       )}
     >
       <div className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
-        <Link to="/" onClick={() => window.scrollTo(0,0)} className="flex items-center gap-2 group">
-          <img src={siteConfig.logo} alt="Club Logo" className="w-8 h-8 rounded-full border border-border group-hover:border-accent transition-colors object-cover" />
-          <span className="font-display font-bold text-lg tracking-tight">
+        <div 
+          onClick={openAnthem}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') openAnthem(); }}
+          title="Click to play Club Logo & Anthem Demonstration"
+          className="flex items-center gap-2.5 group cursor-pointer select-none"
+        >
+          <div className="relative">
+            <img 
+              src={siteConfig.logo} 
+              alt="Club Logo" 
+              className="w-9 h-9 rounded-full border border-border group-hover:border-accent group-hover:scale-105 transition-all object-cover shadow-sm" 
+            />
+            <span className="absolute -bottom-0.5 -right-0.5 bg-accent text-background rounded-full p-0.5 shadow-md flex items-center justify-center scale-90 group-hover:scale-110 transition-transform">
+              <Play className="w-2.5 h-2.5 fill-background" />
+            </span>
+          </div>
+          <span className="font-display font-bold text-lg tracking-tight group-hover:text-accent transition-colors">
             AI CLUB | SIMATS
           </span>
-        </Link>
+        </div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6">

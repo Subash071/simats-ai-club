@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { siteConfig } from "../../data/siteConfig";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { X, Play } from "lucide-react";
+import { useAnthemModal } from "../../context/AnthemModalContext";
 
 export function Footer() {
+  const { openAnthem } = useAnthemModal();
   const currentYear = new Date().getFullYear();
   const [creatorModalOpen, setCreatorModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("profile");
@@ -30,12 +32,24 @@ export function Footer() {
         <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           {/* Logo & About */}
           <div className="col-span-1 md:col-span-1">
-            <Link to="/" onClick={() => window.scrollTo(0,0)} className="flex items-center gap-2 group mb-4">
-              <img src={siteConfig.logo} alt="Club Logo" className="w-8 h-8 rounded-full border border-border group-hover:border-accent transition-colors object-cover" />
-              <span className="font-display font-bold text-xl tracking-tight text-foreground">
+            <div 
+              onClick={openAnthem} 
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') openAnthem(); }}
+              title="Click to play Club Logo & Anthem Demonstration"
+              className="flex items-center gap-2 group mb-4 cursor-pointer select-none"
+            >
+              <div className="relative">
+                <img src={siteConfig.logo} alt="Club Logo" className="w-8 h-8 rounded-full border border-border group-hover:border-accent transition-colors object-cover" />
+                <span className="absolute -bottom-0.5 -right-0.5 bg-accent text-background rounded-full p-0.5 shadow-md flex items-center justify-center scale-75 group-hover:scale-95 transition-transform">
+                  <Play className="w-2 h-2 fill-background" />
+                </span>
+              </div>
+              <span className="font-display font-bold text-xl tracking-tight text-foreground group-hover:text-accent transition-colors">
                 SIMATS ENGINEERING AI CLUB
               </span>
-            </Link>
+            </div>
             <p className="text-muted text-sm text-balance">
               {siteConfig.tagline}
             </p>
