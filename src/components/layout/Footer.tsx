@@ -33,7 +33,7 @@ export function Footer() {
             <Link to="/" onClick={() => window.scrollTo(0,0)} className="flex items-center gap-2 group mb-4">
               <img src={siteConfig.logo} alt="Club Logo" className="w-8 h-8 rounded-full border border-border group-hover:border-accent transition-colors object-cover" />
               <span className="font-display font-bold text-xl tracking-tight text-foreground">
-                AI CLUB | SIMATS
+                SIMATS ENGINEERING AI CLUB
               </span>
             </Link>
             <p className="text-muted text-sm text-balance">
