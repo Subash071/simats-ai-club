@@ -11,10 +11,31 @@ import { IdeaLab } from './pages/IdeaLab';
 import { Join } from './pages/Join';
 import { Contact } from './pages/Contact';
 
-function ScrollToTop() {
+function PageMetadataManager() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
+    // Dynamic page title management for Google Search and Browser tabs
+    const titles: Record<string, string> = {
+      '/': 'AI CLUB | SIMATS - SIMATS ENGINEERING AI CLUB | Saveetha University',
+      '/projects': 'AI Projects | AI CLUB | SIMATS',
+      '/events': 'Events & Workshops | AI CLUB | SIMATS',
+      '/learning': 'Learning Hub | AI CLUB | SIMATS',
+      '/idea-lab': 'Idea Lab | AI CLUB | SIMATS',
+    };
+
+    document.title = titles[pathname] || 'AI CLUB | SIMATS - SIMATS ENGINEERING AI CLUB';
+
+    // Dynamic canonical URL update
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      const fullUrl = pathname === '/' 
+        ? 'https://simats-ai-club.netlify.app/' 
+        : `https://simats-ai-club.netlify.app${pathname}`;
+      canonical.setAttribute('href', fullUrl);
+    }
+
+    // Scroll to top or anchor
     if (hash) {
       setTimeout(() => {
         const element = document.getElementById(hash.replace('#', ''));
@@ -33,7 +54,7 @@ function ScrollToTop() {
 function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop />
+      <PageMetadataManager />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

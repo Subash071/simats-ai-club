@@ -36,13 +36,13 @@ export function Home() {
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-accent"></span>
               </span>
               <span className="font-display tracking-widest uppercase text-sm md:text-base font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-white drop-shadow-[0_0_10px_rgba(0,240,255,0.3)]">
-                Welcome to {siteConfig.clubName}
+                AI CLUB | SIMATS &bull; Saveetha University
               </span>
             </div>
           </motion.div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight text-balance mb-6">
-            Where Students <br className="hidden md:block" />
+            <span className="sr-only">AI CLUB | SIMATS - </span>Where Students <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground to-accent">Build the Future</span> <br className="hidden md:block" />
             with AI.
           </h1>
