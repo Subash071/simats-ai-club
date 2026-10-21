@@ -17,14 +17,14 @@ function PageMetadataManager() {
   useEffect(() => {
     // Dynamic page title management for Google Search and Browser tabs
     const titles: Record<string, string> = {
-      '/': 'AI CLUB | SIMATS - SIMATS ENGINEERING AI CLUB | Saveetha University',
-      '/projects': 'AI Projects | AI CLUB | SIMATS',
-      '/events': 'Events & Workshops | AI CLUB | SIMATS',
-      '/learning': 'Learning Hub | AI CLUB | SIMATS',
-      '/idea-lab': 'Idea Lab | AI CLUB | SIMATS',
+      '/': 'SIMATS ENGINEERING AI CLUB - Saveetha University',
+      '/projects': 'AI Projects | AI CLUB SIMATS',
+      '/events': 'Events & Workshops | AI CLUB SIMATS',
+      '/learning': 'Learning Hub | AI CLUB SIMATS',
+      '/idea-lab': 'Idea Lab | AI CLUB SIMATS',
     };
 
-    document.title = titles[pathname] || 'AI CLUB | SIMATS - SIMATS ENGINEERING AI CLUB';
+    document.title = titles[pathname] || 'SIMATS ENGINEERING AI CLUB';
 
     // Dynamic canonical URL update
     const canonical = document.querySelector('link[rel="canonical"]');

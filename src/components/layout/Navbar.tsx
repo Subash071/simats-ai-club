@@ -59,27 +59,33 @@ export function Navbar() {
       )}
     >
       <div className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
-        <div 
-          onClick={openAnthem}
-          role="button"
-          tabIndex={0}
-          onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') openAnthem(); }}
-          title="Click to play Club Logo & Anthem Demonstration"
-          className="flex items-center gap-2.5 group cursor-pointer select-none"
-        >
-          <div className="relative">
+        <div className="flex items-center gap-2.5 select-none">
+          {/* Logo Button - ONLY clicking the logo plays the Anthem video */}
+          <button
+            type="button"
+            onClick={openAnthem}
+            title="Click logo to play Club Anthem & Logo Demonstration"
+            aria-label="Play Club Anthem & Logo Demonstration"
+            className="relative p-0 border-0 bg-transparent cursor-pointer group focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-full transition-transform hover:scale-105"
+          >
             <img 
               src={siteConfig.logo} 
               alt="Club Logo" 
-              className="w-9 h-9 rounded-full border border-border group-hover:border-accent group-hover:scale-105 transition-all object-cover shadow-sm" 
+              className="w-9 h-9 rounded-full border border-border group-hover:border-accent transition-colors object-cover shadow-sm" 
             />
             <span className="absolute -bottom-0.5 -right-0.5 bg-accent text-background rounded-full p-0.5 shadow-md flex items-center justify-center scale-90 group-hover:scale-110 transition-transform">
               <Play className="w-2.5 h-2.5 fill-background" />
             </span>
-          </div>
-          <span className="font-display font-bold text-lg tracking-tight group-hover:text-accent transition-colors">
+          </button>
+
+          {/* Brand Text - Independent link that navigates to Home */}
+          <Link 
+            to="/" 
+            onClick={() => window.scrollTo(0, 0)}
+            className="font-display font-bold text-lg tracking-tight hover:text-accent transition-colors"
+          >
             AI CLUB | SIMATS
-          </span>
+          </Link>
         </div>
 
         {/* Desktop Nav */}
