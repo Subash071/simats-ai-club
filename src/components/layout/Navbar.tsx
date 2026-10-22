@@ -60,12 +60,11 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2.5 select-none">
-          {/* Logo Button - ONLY clicking the logo plays the Anthem video */}
+          {/* Logo Button - Clicking logo plays Anthem video */}
           <button
             type="button"
             onClick={openAnthem}
-            title="Click logo to play Club Anthem & Logo Demonstration"
-            aria-label="Play Club Anthem & Logo Demonstration"
+            aria-label="SIMATS AI Club Logo"
             className="relative p-0 border-0 bg-transparent cursor-pointer group focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-full transition-transform hover:scale-105"
           >
             <img 
@@ -73,9 +72,6 @@ export function Navbar() {
               alt="Club Logo" 
               className="w-9 h-9 rounded-full border border-border group-hover:border-accent transition-colors object-cover shadow-sm" 
             />
-            <span className="absolute -bottom-0.5 -right-0.5 bg-accent text-background rounded-full p-0.5 shadow-md flex items-center justify-center scale-90 group-hover:scale-110 transition-transform">
-              <Play className="w-2.5 h-2.5 fill-background" />
-            </span>
           </button>
 
           {/* Brand Text - Independent link that navigates to Home */}

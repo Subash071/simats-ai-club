@@ -22,11 +22,6 @@ function FrontCard({ member, isActive }: { member: TeamMember, isActive: boolean
         {/* Soft bottom vignette into card background */}
         <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent pointer-events-none" />
         
-        {/* Category Badge */}
-        <div className="absolute top-4 left-4 bg-background/70 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 shadow-sm">
-          <span className="text-[10px] font-bold tracking-widest text-accent uppercase">{member.category}</span>
-        </div>
-
         {/* Number Badge */}
         <div className="absolute top-4 right-4 bg-background/70 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10 shadow-sm">
           <span className="font-mono text-xs font-semibold text-gray-300">#{member.number}</span>
@@ -73,9 +68,11 @@ function BackCard({ member, onClose }: { member: TeamMember, onClose: () => void
               <span className="font-mono text-xs font-bold px-2 py-0.5 rounded bg-accent/10 text-accent border border-accent/20">
                 #{member.number}
               </span>
-              <span className="text-[10px] font-bold tracking-wider px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-muted uppercase">
-                {member.category}
-              </span>
+              {member.category ? (
+                <span className="text-[10px] font-bold tracking-wider px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-muted uppercase">
+                  {member.category}
+                </span>
+              ) : null}
             </div>
             <h3 className="text-2xl font-display font-bold text-foreground">{member.name}</h3>
             <div className="flex items-center gap-2 mt-1 flex-wrap">

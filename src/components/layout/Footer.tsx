@@ -37,15 +37,10 @@ export function Footer() {
               role="button"
               tabIndex={0}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') openAnthem(); }}
-              title="Click to play Club Logo & Anthem Demonstration"
+              aria-label="SIMATS AI Club Logo"
               className="flex items-center gap-2 group mb-4 cursor-pointer select-none"
             >
-              <div className="relative">
-                <img src={siteConfig.logo} alt="Club Logo" className="w-8 h-8 rounded-full border border-border group-hover:border-accent transition-colors object-cover" />
-                <span className="absolute -bottom-0.5 -right-0.5 bg-accent text-background rounded-full p-0.5 shadow-md flex items-center justify-center scale-75 group-hover:scale-95 transition-transform">
-                  <Play className="w-2 h-2 fill-background" />
-                </span>
-              </div>
+              <img src={siteConfig.logo} alt="Club Logo" className="w-8 h-8 rounded-full border border-border group-hover:border-accent transition-colors object-cover" />
               <span className="font-display font-bold text-xl tracking-tight text-foreground group-hover:text-accent transition-colors">
                 SIMATS ENGINEERING AI CLUB
               </span>

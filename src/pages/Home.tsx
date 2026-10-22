@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Code2, Lightbulb, Rocket, Play } from 'lucide-react';
+import { ArrowRight, BookOpen, Code2, Lightbulb, Rocket } from 'lucide-react';
 import { Button } from '../components/ui/Button';
-import { useAnthemModal } from '../context/AnthemModalContext';
 import { SectionHeading } from '../components/ui/SectionHeading';
 import { HeroNetwork } from '../components/visuals/HeroNetwork';
 import { siteConfig } from '../data/siteConfig';
@@ -13,7 +12,6 @@ import { Join } from './Join';
 import { Contact } from './Contact';
 
 export function Home() {
-  const { openAnthem } = useAnthemModal();
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -60,23 +58,14 @@ export function Home() {
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              onClick={openAnthem}
-              className="w-full sm:w-auto group border-accent/40 hover:bg-accent/10 cursor-pointer shadow-[0_0_20px_rgba(0,240,255,0.15)]"
-            >
-              <Play className="mr-2 w-4 h-4 text-accent fill-accent group-hover:scale-110 transition-transform" />
-              Watch Logo &amp; Anthem
-            </Button>
-            <Button size="lg" variant="ghost" className="w-full sm:w-auto text-muted hover:text-foreground">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto">
               <Link to="/#join" onClick={(e) => {
                 if (window.location.pathname === '/') {
                   e.preventDefault();
                   document.getElementById('join')?.scrollIntoView({ behavior: 'smooth' });
                   window.history.pushState(null, '', '/#join');
                 }
-              }}>Join Community</Link>
+              }}>Join the Community</Link>
             </Button>
           </div>
         </div>
